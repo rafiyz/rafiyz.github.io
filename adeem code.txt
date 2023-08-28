@@ -1,0 +1,55 @@
+   <h4>Casual Diploma Teacher at <a href="https://www.mq.edu.au/study/find-a-course/pathway-programs">Macquarie University International College (MUIC), NSW, Australia</a>:</h4>
+            <ul>
+                <li>Introduction to Computer Programming (July 2023 - Current)</li>
+                <li>Fundamentals of Computer Science (Dec 2022 - Current)</li>
+            </ul>
+
+            <h4>Sessional Academics at <a href="https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-computing">Macquarie University (School of Computing), NSW, Australia</a>:</h4>
+            <ul>
+                <li>Fundamentals of Computer Science (July 2022 - Current)</li>
+            </ul>
+
+            <h4>Casual Research Assistant at <a href="https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-computing">Macquarie University (School of Computing), NSW, Australia</a>:</h4>
+            <ul>
+                <li>Evolutionary Computations (April 2023 - Current)</li>
+            </ul>
+
+            <h4>Exam Supervisor at <a href="https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-computing">Macquarie University (School of Computing), NSW, Australia</a>:</h4>
+            <ul>
+                <li>Zoom/ On campus invigilation (Nov 2022 - Current)</li>
+            </ul>
+
+            <h4>Visiting Lecturer at <a href="https://lhr.nu.edu.pk/">National University of Computer and Emerging Sciences, Pakistan</a>:</h4>
+            <ul>
+                <li>Web Programming (Aug 2018 - Dec 2018)</li>
+            </ul>
+
+            <h4>Lecturer at <a href="https://uol.edu.pk/">The University of Lahore, Pakistan (Sep 2018 - March 2022)</a>:</h4>
+            <ul>
+                <li>Introduction to Computer Programming </li>
+                <li>Programming Fundamentals</li>
+                <li>Data Structures and Algorithms </li>
+                <li>Design and analysis of algorithms </li>
+                <li>Object Oriented Programming</li> 
+            </ul>
+
+            <h4>Lecturer at <a href="https://leads.edu.pk/">Lahore Leads University, Lahore, Pakistan (Feb 2018 - Sep 2018)</a>:</h4>
+            <ul>
+              <li>Introduction to Computer Programming</li>
+              <li>Programming Fundamentals</li>
+              <li>Data Structures and Algorithms</li>
+              <li>Design and analysis of algorithms</li>
+              <li>Object Oriented Programming</li> 
+            </ul>
+
+            <h4>Teaching Assistant at <a href="https://lhr.nu.edu.pk/">National University of Computer and Emerging Sciences, Pakistan</a>:</h4>
+            <ul>
+                <li>Programming Fundamentals</li>
+                <li>Object Oriented Programming</li>
+                <li>Computer Organization and Assembly Language</li>
+            </ul>
+
+            <h4>Research Student at <a href="https://lhr.nu.edu.pk/">National University of Computer and Emerging Sciences, Pakistan</a>:</h4>
+            <ul>
+                <li>Evolutionary Computations (Aug 2015 - Jan 2018)</li>
+            </ul>
