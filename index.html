@@ -1,753 +1,536 @@
-
 <!DOCTYPE html>
-
-<!--license 
-    Plain-Academic by Vasilios Mavroudis
-    Released under the  Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
 <html lang="en">
 <head>
-  <title>Rafiullah Khan</title>
-    <link rel="icon" type="image/x-icon" href="images/logo2.ico">
-  <meta charset="utf-8">
-  <meta name="author" content="Rafiullah Khan">
-  <meta name="description" content="Personal website of Rafiullah Khan">
-  <meta name="keywords" content="Machine Learning, Privacy, Web Search Privacy, Rafiullah Khan">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Rafiullah Khan | Academic Portfolio</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="description" content="Dr. Rafiullah Khan - Academic Portfolio, Machine Learning, Privacy, Cybersecurity, NLP, University of Agriculture Peshawar">
+<meta name="keywords" content="Rafiullah Khan, Machine Learning, Privacy, Cybersecurity, NLP, Academic Portfolio">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #ffeecc;
+  --primary: #990000;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #666;
+  --accent: #fff3e6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== NAVBAR ===== */
+header {
+  background: var(--primary);
+  color: white;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+header h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.3px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+  font-weight: 500;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1250px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* ===== HERO PROFILE ===== */
+.hero {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 28px;
+  background: var(--card);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+.hero img {
+  width: 220px;
+  border-radius: 16px;
+  border: 4px solid var(--primary);
+}
+.hero h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 30px;
+}
+.hero p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+.hero .tags span {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--primary);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin: 4px 6px 0 0;
+  border: 1px solid var(--primary);
+}
+
+/* ===== BUTTONS ===== */
+.buttons-group {
+  margin-top: 12px;
+}
+.buttons-group strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: var(--primary);
+}
+.buttons-group a {
+  display: inline-block;
+  margin: 6px 6px 0 0;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.2s;
+  background: white;
+}
+.buttons-group a:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ===== STATS ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+.stat {
+  background: var(--card);
+  padding: 16px;
+  border-left: 6px solid var(--primary);
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.14);
+  font-size: 14px;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  margin-top: 50px;
+}
+.section h3 {
+  font-size: 22px;
+  color: var(--primary);
+  border-left: 7px solid var(--primary);
+  padding-left: 12px;
+  margin-bottom: 18px;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: var(--card);
+  padding: 18px 22px;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+  transition: 0.2s;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.2);
+}
+
+/* ===== TIMELINE ===== */
+.timeline-item {
+  border-left: 3px solid var(--primary);
+  padding-left: 16px;
+  margin-bottom: 12px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  padding: 22px;
+  border-top: 2px solid var(--primary);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero img {
+    margin: auto;
+  }
+}
+</style>
 </head>
 <body>
 
-<style>
-  .heading {
-    word-wrap: break-word;
-    font-family: 'Oswald', sans-serif;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+<header>
+  <h1>Dr. Rafiullah Khan</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="pub.html">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#services">Services</a>
+    <a href="Artwork.htm">Art Work</a>
+    <a href="students.htm">Students</a>
+    <a href="courses.htm">Courses</a>
+  
+    
 
-  .info-text {
-    margin-bottom: 10px;
-  }
+  </nav>
+</header>
 
-  .university-color {
-    color: #a6192e;
-  }
+<div class="container">
 
-  .link-list a {
-    margin-right: 5px;
-  }
+<!-- ===== HERO PROFILE ===== -->
+<div class="hero">
+  <img src="Rafi Pic.jpeg" alt="Dr. Rafiullah Khan">
 
-  body {
-    background-color: #e6e4dc;
-  }
+  <div>
+    <h2>Dr. Rafiullah Khan</h2>
+    <p><b>Lecturer & BS (Cyber Security and Software Engineering)  Program Coordinator</b></p>
+    <p>Institute of Computer Science & IT, University of Agriculture Peshawar, Pakistan</p>
+    <p><b>Visiting Fellow & Casual Academic</b> — Macquarie University, Australia</p>
+    <p><b>Research Focus:</b> Machine Learning, Privacy, Cybersecurity, NLP, Data Science</p>
 
-.j_navbar
-{
-	/* background-image:linear-gradient(90deg,#76232f,#a6192e 60%,#d6001c 80%,#d6001c) */
-    background-color: #76232f;
-}
-
-.justified-text {
-        text-align: justify;
-    }
-
-/* Reset some default styles for the footer */
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
-/* Footer styles */
-.footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Social icons */
-.social-icons {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-}
-
-.social-icons li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.social-icons a {
-  color: #fff;
-  font-size: 20px;
-  text-decoration: none;
-}
-
-<a name="top"></a>
-</style>
-
-
-<nav class="navbar navbar-inverse navbar-static-top j_navbar" role="navigation" >
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Rafiullah Khan</a>
+    <div class="tags">
+      <span>Machine Learning</span>
+      <span>Privacy</span>
+      <span>Cybersecurity</span>
+      <span>NLP</span>
+      <span>Data Science</span>
+      <span>IoT</span>
     </div>
 
-    <div class="collapse navbar-collapse " id="navbar-collapse">
+    <div class="buttons-group">
+      <strong>Contact</strong>
+      <a href="mailto:rafiyz@aup.edu.pk">AUP Email</a>
+      <a href="mailto:rafiyz@gmail.com">Gmail</a>
+      <!-- <a href="mailto:rafiullah.khan@mq.edu.au">MQ Email</a> -->
+    </div>
 
-
-
-      <style>
-        @keyframes blink {
-            0% { color: #DFFF00; }
-            25% { color: #f5b7b1; }
-            50% { color: #82e0aa; }
-            75% { color: #ec7063; }
-            100% { color: #aed6f1; }
-        }
-
-        .blinking-text {
-            font-size: 14px;
-            font-weight: bold;
-            animation: blink 3s infinite;
-        }
-    </style>
-
-      <ul class="nav navbar-nav ">
-        <li><a href="index.html">Home</a></li>
-		<li><a href="#education">Education</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#teaching">Experience</a></li>
-        <li><a href="#course">Courses Proposed</a></li>
-        <li><a href="#services">Services & Memberships</a></li>
-		<li><a href="Artwork.htm">Art Work</a></li>
-		<li><a href="students.htm">Students</a></li>
-    <li><a href="courses.htm" ><p class="blinking-text"">Courses</p></a></a></li>
-      </ul>
+    <div class="buttons-group">
+      <strong>Academic Profiles</strong>
+      <a href="https://scholar.google.com/citations?user=iHW8mAkAAAAJ&hl=en" target="_blank">Google Scholar</a>
+      <a href="https://www.researchgate.net/profile/Rafiullah-Khan-7" target="_blank">ResearchGate</a>
+      <a href="https://www.linkedin.com/in/rafiullah-khan-49359a127/" target="_blank">LinkedIn</a>
+      <a href="https://orcid.org/0000-0002-0229-7747" target="_blank">ORCID</a>
     </div>
   </div>
-</nav>
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-xs-12">
-              <div class="heading">Rafiullah Khan</div>
-              <div class="row">
-                <div class="col-md-10 col-xs-4">
-                  <img class="img-responsive" src="Rafi Pic.jpeg" alt="Avatar of Rafiullah Khan">
-                </div>
-              </div>
-              <div class="info-text">
-                <b><i>Coordinator BS (Cyber Security), BS Software Engineering<br>Lecturer</i></b><br>
-                Institute of Computer Science and Information Technology<br>
-                <p class="university-color">The University of Agriculture
-                Peshawar, Pakistan<br></p>
-                
-                <br><u><i>Previous Engagment</i></u>:<br> 
-                <i><a href="https://researchers.mq.edu.au/en/persons/rafiullah-khan">Visiting Fellow</a> | Casual Acadamic</i><br>
-                School of Computing<br>
-                <p class="university-color">Macquarie University
-                Sydney, NSW, Australia<br></p>
-                <b>Email</b>:<br> 
-                <a href="mailto:rafiyz@aup.edu.pk">rafiyz@aup.edu.pk</a> |
-				        <a href="mailto:rafiyz@gmail.com">rafiyz@gmail.com</a>|
-                <a href="mailto:rafiullah.khan@mq.edu.au">rafiullah.khan@mq.edu.au</a> 
-              </div>
-              <div class="link-list">
-                <a href="https://scholar.google.com/citations?user=iHW8mAkAAAAJ&hl=en">Google Scholar</a> |
-                <a href="https://www.researchgate.net/profile/Rafiullah-Khan-7">ResearchGate</a> |
-                <a href="https://www.linkedin.com/in/rafiullah-khan-49359a127/">LinkedIn</a> |
-				<a href="https://orcid.org/0000-0002-0229-7747">ORCID:0000-0002-0229-7747</a>
-              </div>
-              <br>
-
-              <div class="link-list">
-                <i class="fa fa-globe" style="font-size:20px;color:#a6192e"></i>
-                <a href="https://www.australia.gov.au/"> Australia</a> |
-                <a href="https://pakistan.gov.pk/"> Pakistan</a>
-              </div>
-
-            </div>
-            <div class="col-md-8 col-xs-12">
-                <div class="col" style="margin-top:3%; text-align:left;">
-
-                    <p class="justified-text"><strong style="color:#a6192e";>About me!</strong> <br>
-                      I am a researcher and academician with a focus on machine learning and privacy. 
-                      I recently completed my <b>Post-Doctoral Fellowship</b> and <b>Visiting 
-                      Fellowship</b> at the <b>School of Computing, Macquarie University</b>, NSW, Australia. 
-                      I have now rejoined the <b>Institute of Computer Science and Information Technology 
-                      (ICS/IT) at The University of Agriculture</b>, Peshawar, Pakistan, 
-                      where I previously served as a Lecturer from 2011 to 2023.<br>
-					<br>
-					I have received <strong>Ph.D.</strong> Degree in <strong>Computer Science</strong> from <strong>Capital University of Science and Technology (CUST)</strong>, Islamabad, 
-					Pakistan, in 2020. Previously, I worked as <strong>Lecturer</strong> at <strong>Preston University Peshawar Campus</strong>, <strong>Program Coordinator</strong> 
-					and <strong>Lecturer</strong> at <strong>Farabi College Peshawar</strong>, and <strong>Visiting Lecturer</strong> at <strong>Iqra National University </strong>Peshawar 
-					and <strong>Allama Iqbal Open University Peshawar</strong>. <br><br>
-					
-					As an educator with over 17 years of experience, I have been privileged to teach Computer Science and Information Technology-related courses at various 
-					universities' <strong>undergraduate, graduate, and PhD</strong> levels. My teaching philosophy is centered on fostering a dynamic, inclusive learning 
-					environment that encourages active student engagement and critical thinking. I am dedicated to inspiring students to become lifelong learners with the skills 
-					and knowledge needed to excel academically and professionally. <br><br>
-					
-					As a researcher, I bring a unique perspective to the classroom, incorporating the latest developments and cutting-edge research into my teaching. My ability to 
-					connect theoretical concepts to real-world applications enriches learning and instils a sense of relevance and excitement among students. <br><br>
-					
-					Beyond teaching, I am enthusiastic about contributing to the academic community through research collaboration, mentoring students, and participating in 
-					departmental initiatives. I also served as the <strong>Program Coordinator (5 years)</strong>, a member of the <strong>Board of Studies (8 years)</strong> and 
-					founding member of <strong>ZeroOne Research Group (8 Years)</strong>, and a member of the Institute's <strong>Purchasing Committee (3 years)</strong> at ICS/IT, 
-					the University of Agriculture Peshawar. <br> <br>
-					
-					I can speak five languages <strong>(English, Urdu/Hindi, Pashto, Hindko, and Panjabi)</strong>, and my hobbies include reading books, PC games and documentaries, tourism, 
-					visiting historical sites, history, swimming, and all other stuff that inspires me. <br>
-
-
-                    <p class="justified-text"><strong style="color:#a6192e";>Research Interests</strong>.<br>
-                    My research interests are <strong>Privacy, Machine Learning, Data Science, Natural Language Processing, Sentiment Analysis, Networks, Internet of Things</strong>.
-                    <hr>
-
-                </div>
-
-
- <h2 id="education" style="color:#a6192e";>Education </h2><br>  
-<div class=WordSection1>
-
-<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
-
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
- mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:18.35pt'>
-  <td width=643 valign=top style='width:950.3pt;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.35pt'>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Post
-  Doc. <span style='mso-spacerun:yes'></span>(Machine Learning) 2025<o:p></o:p></span></b></p>
-  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:
-  10.0pt'><a href="https://www.mq.edu.au/">Macquarie University, Sydney NSW,
-  Australia</a><b style='mso-bidi-font-weight:normal'>.</b></span><b
-  style='mso-bidi-font-weight:normal'><span lang=EN-US> </span></b></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:1;height:28.1pt'>
-  <td width=643 valign=top style='width:882.3pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:28.1pt'>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>PH.D.<span
-  style='mso-spacerun:yes'> </span>Computer Science (Data Mining and Privacy) 2020<o:p></o:p></span></b></p>
-  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:
-  10.0pt'><a href="https://cust.edu.pk/">Capital University of Science and
-  Technology, Islamabad, Pakistan</a></span><b style='mso-bidi-font-weight:
-  normal'><span lang=EN-US>. <o:p></o:p></span></b></p>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
-  style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Thesis Title</span><span
-  lang=EN-US>: </span></b><span lang=EN-US><a
-  href="https://cust.edu.pk/on-the-effectiveness-of-private-information-retrieval-protocols/"><b><span
-  style='mso-bidi-font-size:10.0pt;color:#0070C0'>On the
-  Effectiveness of Private Information Retrieval Protocols</span></b></a></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:2;height:28.1pt'>
-  <td width=643 valign=top style='width:882.3pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:28.1pt'>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>MS
-  Information Technology (Internetworking and Digital Communication) 2010<o:p></o:p></span></b></p>
-  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:
-  10.0pt'><a href="https://imsciences.edu.pk/">Institute of Management Science,
-  Peshawar, Pakistan.</a></span><span lang=EN-US> <o:p></o:p></span></p>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
-  style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Thesis Title:<span
-  style='mso-spacerun:yes'> </span></span><span class=MsoHyperlink><span
-  lang=EN-US style='color:black;mso-themecolor:text1;
-  mso-bidi-font-weight:bold;text-decoration:none;text-underline:none'>Conceptual
-  Framework of Multi-Bandwidth Link Aggregation</span></span></b></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes;height:26.45pt'>
-  <td width=643 valign=top style='width:882.3pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:26.45pt'>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>BS
-  (Hons). Computer Science 2007<span style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></p>
-  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:
-  10.0pt'><a href="https://www.icp.edu.pk/">Islamia College, University of
-  Peshawar, Pakistan</a><b style='mso-bidi-font-weight:normal'>.</b></span><span
-  lang=EN-US> <b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
-  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
-  style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Thesis Title: </span><span
-  class=MsoHyperlink><span lang=EN-US style='color:black;mso-themecolor:text1;
-  mso-bidi-font-weight:bold;text-decoration:none;text-underline:
-  none'>Performance Evaluation of Peshawar University Computer Network and
-  Suggestions for Optimization</span></span></b></p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:
-14.0pt;color:#A6192E'>Certifications<o:p></o:p></span></b></p>
-
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
- mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:12.4pt'>
-  <td width=643 valign=top style='width:482.1pt;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.4pt'>
-  <p class=MsoNormal><b><span lang=EN-US>Begin to Teach (BTT), Macquarie University, Sydney, 2023.<o:p></o:p></span></b></p>
-  </td>
- </tr>
-
-	
-<tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:12.4pt'>
-  <td width=643 valign=top style='width:482.1pt;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.4pt'>
-  <p class=MsoNormal><b><span lang=EN-US>Google Data Analytics 2023.<o:p></o:p></span></b></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:1;height:13.05pt'>
-  <td width=643 valign=top style='width:482.1pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:13.05pt'>
-  <p class=MsoNormal><b><span lang=EN-US>Cisco Certified Network Professional
-  (CCNP) Switching 2009.<o:p></o:p></span></b></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:2;height:12.4pt'>
-  <td width=643 valign=top style='width:482.1pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.4pt'>
-  <p class=MsoNormal><b><span lang=EN-US>Cisco Certified Network Professional
-  (CCNP) Routing 2008.<o:p></o:p></span></b></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes;height:12.4pt'>
-  <td width=643 valign=top style='width:482.1pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.4pt'>
-  <p class=MsoNormal><b><span lang=EN-US>Cisco Certified Network Associate
-  (CCNA) 2007.<o:p></o:p></span></b></p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
-<a href="#top">back to top</a>
-
 </div>
 
-                <div class="col">
-                    <h2 id="publications" style="color:#a6192e";>Recent Publications</h2>
-                    <p>See my <a href="https://scholar.google.com/citations?user=iHW8mAkAAAAJ&hl=en">Google Scholar</a>,
-          
-                    <a href="https://orcid.org/0000-0002-0229-7747">ORCID</a>,
-                    and <a href="https://www.researchgate.net/profile/Rafiullah-Khan-7">ResearchGate</a> for the complete publication list.
-                    </p>
+<!-- ===== STATS ===== -->
+<div class="stats">
+  <div class="stat"><b>Total Publications</b><br>43+ (Journals, Conferences, Books)</div>
+  <div class="stat"><b>Journal Papers</b><br>26</div>
+  <div class="stat"><b>Conference Papers</b><br>12</div>
+  <div class="stat"><b>Book Chapters</b><br>4</div>
+  <div class="stat"><b>Books</b><br>1</div>
+</div>
 
-                    <hr>
+<!-- ===== ABOUT ME ===== -->
+<div class="section" id="about">
+  <h3>About Me</h3>
+  <div class="card">
+    <p>
+      I am a researcher and academician with a focus on <b>machine learning and privacy</b>. 
+      I recently completed my <b>Post-Doctoral Fellowship</b> and <b>Visiting Fellowship</b> at the 
+      <b>School of Computing, Macquarie University</b>, NSW, Australia. 
+      I have now rejoined the <b>Institute of Computer Science and Information Technology (ICS/IT)</b> 
+      at <b>The University of Agriculture, Peshawar, Pakistan</b>, where I previously served as a Lecturer 
+      from 2011 to 2023.
+    </p>
 
-                     <h3 id="journal-papers"><strong><a href="pub.html">Journal/Conference Papers</a></strong></h3>  
-					<h3 id="journal-papers"><strong><a href="book.html">Books/Chapters</a></strong></h3>
-                   <div class=WordSection1>
+    <p>
+      I received my <b>Ph.D. degree in Computer Science</b> from the 
+      <b>Capital University of Science and Technology (CUST)</b>, Islamabad, Pakistan, in 2020. 
+      Previously, I worked as <b>Lecturer</b> at Preston University Peshawar Campus, 
+      <b>Program Coordinator and Lecturer</b> at Farabi College Peshawar, 
+      and <b>Visiting Lecturer</b> at Iqra National University Peshawar and 
+      Allama Iqbal Open University Peshawar.
+    </p>
 
+    <p>
+      As an educator with over <b>18 years of experience</b>, I have taught Computer Science and 
+      Information Technology-related courses at various universities at <b>undergraduate, graduate, 
+      and PhD levels</b>. My teaching philosophy emphasizes fostering a dynamic and inclusive learning 
+      environment that encourages active student engagement and critical thinking. I am committed to 
+      inspiring students to become lifelong learners with the skills and knowledge required to excel 
+      academically and professionally.
+    </p>
 
+    <p>
+      As a researcher, I integrate cutting-edge research and emerging technologies into my teaching. 
+      My ability to connect theoretical concepts with real-world applications enhances the learning 
+      experience and instils a strong sense of relevance and motivation among students.
+    </p>
 
-            </div>
-        <hr>
-        <div class="col">
-            <h2 id="teaching" style="color:#a6192e";>Professional Experience</h2>
+    <p>
+      <p>
+  Beyond teaching, I actively contribute to the academic community through research collaboration, 
+  student mentoring, and departmental initiatives. I served as <b>Exam Coordinator (5 years)</b>, a member of the <b>Board of Studies (10 years)</b>, 
+  a founding member of the <b>ZeroOne Research Group (10 years)</b>, and a member of the 
+  <b>Institute’s Purchasing Committee (3 years)</b> at ICS/IT, The University of Agriculture Peshawar. 
+  Currently, I am serving as <b>Coordinator of BS Cyber Security and BS Software Engineering programs</b>.
+</p>
 
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none'>
- <tr>
-  <td width=438 valign=top style='width:328.65pt;border:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  
-  <p class=MsoNormal><b><span style='color:#A6192E'><a
-    href="https://www.aup.edu.pk/tstaff_dept_details.php?s_id=394&amp;d_id=28&amp;f_id=10"><span
-    style='color:#A6192E'>Lecturer </span><span style='color:#A6192E;font-weight:
-    normal'>and </span><span style='color:#A6192E'>BS Program Coordinator</span></a>
-    </span></b></p>
-    <p class=MsoNormal>ICS&amp;IT, The University of Agriculture Peshawar,
-    Pakistan.</p>
-  </td>
-  <td width=301 valign=top style='width:225.4pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>September 2011 - To date </p>
-  </td>
- </tr>
- <tr>
-  <td width=438 valign=top style='width:328.65pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal><b><a href="https://researchers.mq.edu.au/en/persons/rafiullah-khan">Visiting Fellow</a></b> and<b> Casual Teacher </b></p>
- 
-  <span style='color:#A6192E'><a
-    href="https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-computing"><span
-    style='color:#A6192E'>School of Computing, Macquarie University, NSW, Australia. </span><span style='color:#A6192E;font-weight:
-    normal'></td>
-  <td width=301 valign=top style='width:225.4pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>May 2023 - May 2025 </p>
-  </td>
- </tr>
- <tr>
-  <td width=438 valign=top style='width:328.65pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal><b>Lecturer </b>and <b>BCS Program Coordinator</b></p>
-  <p class=MsoNormal>Farabi College, Peshawar, Pakistan.</p>
-  </td>
-  <td width=301 valign=top style='width:225.4pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>January 2009- September 2011</p>
-  </td>
- </tr>
- <tr>
-  <td width=438 valign=top style='width:328.65pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal><b>Lecturer </b></p>
-  <p class=MsoNormal>Preston University, Peshawar Campus, Pakistan.</p>
-  </td>
-  <td width=301 valign=top style='width:225.4pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>May 2007 - December 2008</p>
-  </td>
- </tr>
- <tr>
-  <td width=438 valign=top style='width:328.65pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal><b>Lecturer (Visiting)</b></p>
-  <p class=MsoNormal>Iqra National University, Peshawar, Pakistan.</p>
-  </td>
-  <td width=301 valign=top style='width:225.4pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>February 2011 - September 2011</p>
-  </td>
- </tr>
- <tr>
-  <td width=438 valign=top style='width:328.65pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal><b>Lecturer (Visiting)</b></p>
-  <p class=MsoNormal>Allama Iqbal Open University, Peshawar Campus, Pakistan.</p>
-  </td>
-  <td width=301 valign=top style='width:225.4pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>February 2009 - June 2009</p>
-  <p class=MsoNormal>&nbsp;</p>
-  </td>
- </tr>
-</table>
-<p class=MsoNormal>&nbsp;</p>
+    </p>
 
-<a href="#top">back to top</a>
+    <p>
+      I can speak five languages: <b>English, Urdu/Hindi, Pashto, Hindko, and Panjabi</b>. 
+      My hobbies include reading books, PC games and documentaries, tourism, visiting historical sites, 
+      history, swimming, and other activities that inspire creativity and intellectual growth.
+    </p>
+  </div>
+</div>
 
- <h2 id="teaching" style="color:#a6192e";>Research Experience</h2>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:14.8pt'>
-  <td width=603 valign=top style='width:451.95pt;border:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:14.8pt'>
-  <p class=MsoNormal style='background:#E6E4DC'><span class=MsoHyperlink><span
-  style='color:#A6192E'><a
-  href="https://www.researchgate.net/lab/Zero-One-Research-Group-Rafiullah-Khan"><span
-  style='font-size:10.5pt;font-family:"Helvetica",sans-serif;color:#A6192E'>Zero-One
-  Research Group at The University of Agriculture Peshawar Pakistan</span></a></span></span>
-  &nbsp;</p>
-  </td>
-  <td width=196 valign=top style='width:147.0pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.8pt'>
-  <p class=MsoNormal>Founding Member</p>
-  </td>
-  <td width=131 valign=top style='width:98.4pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.8pt'>
-  <p class=MsoNormal>2013 – To date</p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:1;height:13.35pt'>
-  <td width=603 valign=top style='width:451.95pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.35pt'>
-  <p class=MsoNormal style='background:#E6E4DC'><span style='font-size:10.5pt;
-  font-family:"Helvetica",sans-serif;color:#333333'>S2MILE at Macquarie
-  University, Australia</span></p>
-  </td>
-  <td width=196 valign=top style='width:147.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:13.35pt'>
-  <p class=MsoNormal>Member</p>
-  </td>
-  <td width=131 valign=top style='width:98.4pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:13.35pt'>
-  <p class=MsoNormal>2023 – To date</p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:2;height:13.35pt'>
-  <td width=603 valign=top style='width:451.95pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.35pt'>
-  <p class=MsoNormal style='background:#E6E4DC'><span style='font-size:10.5pt;
-  font-family:"Helvetica",sans-serif;color:#A6192E'><a
-  href="https://data-science-group.github.io/"><span style='color:#A6192E'>Data
-  Science Lab at Macquarie University, Australia</span></a></span></p>
-  </td>
-  <td width=196 valign=top style='width:147.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:13.35pt'>
-  <p class=MsoNormal>Member</p>
-  </td>
-  <td width=131 valign=top style='width:98.4pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:13.35pt'>
-  <p class=MsoNormal>2023 – To date</p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes;height:12.7pt'>
-  <td width=603 valign=top style='width:451.95pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.7pt'>
-  <p class=MsoNormal style='background:#E6E4DC'><span style='font-size:10.5pt;
-  font-family:"Helvetica",sans-serif;color:#A6192E'><a
-  href="https://pcn.net.pk/"><span style='color:#A6192E'>Parallel Computing and
-  Network Research Lab</span></a></span></p>
-  </td>
-  <td width=196 valign=top style='width:147.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.7pt'>
-  <p class=MsoNormal>Member</p>
-  </td>
-  <td width=131 valign=top style='width:98.4pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.7pt'>
-  <p class=MsoNormal>2015 – 2020</p>
-  </td>
- </tr>
-</table>
-
-         
-        </div>
-
-        <hr>
-
-        <div class="col">
-            <h2 id="course" style="color:#a6192e";>Courses Proposed </h2>
-            <br>
-            <ul>
-            <li> <a href="Anonymity and Privacy.pdf">Anonymity and Privacy </a></li>
-            <li> <a href="Text Mining and Analytics.pdf">Text Mining and Analytics </a> </li>
-			<li> <a href="Private Information Retrieval.pdf">Private Information Retrieval </a></li>
-            </ul>
-        </div>
-        <hr>
-
-        <div class="col">
-            <h2 id="awards" style="color:#a6192e";>Computing Skills</h2>
-            <br>
-            <ul>
-                <li><strong>Languages:</strong> C, C++, Java, Python, LaTeX, SQL</li>
-                    <li><strong>Tool/Platforms:</strong> WEKA, MySQL </li>
-                        <li><strong>Web Dev:</strong> HTML, PHP</li>
-                            <li><strong>OS:</strong> Linux, Windows, Android, MAC</li>
-                                <li><strong>Design:</strong> Adobe Express, AAA Logo </li>
-                                    <li><strong>Others:</strong> MS Office, MS Project, MS Visio, End Note</li>
-            </ul>
-        </div>
-
-        <hr>
-        <h2 id="services" style="color:#a6192e";>Services & Memberships</h2>
-        <h4 id="conference-organizing-committee">Conference Organizing Committee</h4>
-		
-		<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:22.1pt'>
-  <td width=595 valign=top style='width:446.15pt;border:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:22.1pt'>
-  <p class=MsoNormal style='background:#E6E4DC'><span class=MsoHyperlink><span
-  style='color:#A6192E'><a href="https://ictapp-23.aup.edu.pk/committees.html"><span
-  style='font-family:"Helvetica",sans-serif;color:#A6192E'>International
-  Conference on Computing Technologies, Tools, and Applications (ICTAPP-23)
-  2023</span></a>.</span></span><span style='font-family:"Helvetica",sans-serif;
-  color:#333333'> <o:p></o:p></span></p>
-  <p class=MsoNormal style='background:#E6E4DC'><b><span style='font-family:
-  "Helvetica",sans-serif;color:#333333'>(Keynote Speaker, Member Organizing Committee,
-  Reviewer)</span></b><o:p></o:p></p>
-  </td>
-  <td width=132 valign=top style='width:99.2pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:22.1pt'>
-  <p class=MsoNormal>The University of Agriculture Peshawar<o:p></o:p></p>
-  </td>
-  <td width=67 valign=top style='width:50.2pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:22.1pt'>
-  <p class=MsoNormal>Peshawar Pakistan<o:p></o:p></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:16.8pt'>
-  <td width=595 valign=top style='width:446.15pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:16.8pt'>
-  <p class=MsoNormal style='background:#E6E4DC'><span class=MsoHyperlink><span
-  style='color:#A6192E'><a
-  href="https://adma2024.github.io/organisation_committee.html"><span
-  style='font-family:"Helvetica",sans-serif;color:#A6192E'>The 20th International
-  Conference Advanced Data Mining and Applications 2024</span></a>.</span></span><span
-  style='font-family:"Helvetica",sans-serif;color:#333333'> <o:p></o:p></span></p>
-  <p class=MsoNormal style='background:#E6E4DC'><b><span style='font-family:
-  "Helvetica",sans-serif;color:#333333'>(Member Organizing Committee, Reviewer)</span></b><o:p></o:p></p>
-  </td>
-  <td width=132 valign=top style='width:99.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:16.8pt'>
-  <p class=MsoNormal>Macquarie University<o:p></o:p></p>
-  </td>
-  <td width=67 valign=top style='width:50.2pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:16.8pt'>
-  <p class=MsoNormal>Sydney Australia<o:p></o:p></p>
-  </td>
- </tr>
-</table>
-		
-		
-       <h4 id="conference-reviewer">Journal Reviewer</h4>
-        <ul>
-      <div class=WordSection1>
-
-<p class=MsoNormal><span lang=EN-AU style='font-family:"Arial",sans-serif;
-mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-minor-bidi;mso-ansi-language:EN-AU'><a href="https://ieeeaccess.ieee.org/">IEEE
-Access</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
-href="https://www.nature.com/srep/">Scientific Reports</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.sciencedirect.com/journal/computers-and-security">Computer
-&amp; Security</a><o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-AU style='font-family:"Arial",sans-serif;
-mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-minor-bidi;mso-ansi-language:EN-AU'><a
-href="https://www.hindawi.com/journals/complexity/">Complexity</a>
-&nbsp;&nbsp;&nbsp;<a href="https://www.hindawi.com/journals/sp/">Scientific
-Programming</a>&nbsp; <span style='mso-spacerun:yes'> </span><span
-style='color:#222222'><a
-href="https://www.techscience.com/journal/cmc">CMC-Computers, Materials &amp;
-Continua</a></span><o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-AU style='font-family:"Arial",sans-serif;
-mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-minor-bidi;color:#222222;mso-ansi-language:EN-AU'><a
-href="https://ieee-pes.org/publications/transactions-on-smart-grid/">IEEE
-Transactions on Smart Grid</a><span style='mso-tab-count:1'>      </span><span
-style='mso-spacerun:yes'>   </span></span><span class=MsoHyperlink><span
-lang=EN-AU style='font-family:"Arial",sans-serif;mso-ascii-theme-font:minor-bidi;
-mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;mso-ansi-language:
-EN-AU'><a href="https://dl.acm.org/journal/tweb">ACM Transactions on the Web</a><o:p></o:p></span></span></p>
-
-<p class=MsoNormal><span style='font-family:"Arial",sans-serif;mso-ascii-theme-font:
-minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
-color:#222222 '><a
-href="https://onlinelibrary.wiley.com/journal/15320634">CCPE journal</a><span
-style='mso-tab-count:1'>  </span> <span style='mso-tab-count:1'>           </span><a
-href="https://journal.50sea.com/index.php/IJIST">IJIST</a><span
-style='mso-tab-count:1'>   </span><span style='mso-tab-count:1'>            </span><span
-style='mso-spacerun:yes'>       </span><a
-href="https://www.techscience.com/journal/iasc">IASC</a><span style='mso-tab-count:
-1'>        </span></span><span lang=EN-AU style='font-family:"Arial",sans-serif;
-mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-minor-bidi;mso-ansi-language:EN-AU'><a href="https://www.igi-global.com/">IGI
-Global</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
-lang=EN-AU style='font-family:"Arial",sans-serif;mso-ascii-theme-font:minor-bidi;
-mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#222222;
-background:white'> </span><span style='font-family:"Arial",sans-serif;
-mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-minor-bidi;color:#222222 '><o:p></o:p></span></p>
-
-<p class=MsoNormal><span style='font-family:"Arial",sans-serif;mso-ascii-theme-font:
-minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
-color:#222222 '><a
-href="https://ijai.iaescore.com/index.php/IJAI">IAES International Journal of
-Artificial </a><span style='mso-spacerun:yes'> </span><span
-style='mso-spacerun:yes'>          </span><span
-style='mso-spacerun:yes'> </span></span><span class=MsoHyperlink><span
-style='font-family:"Arial",sans-serif;mso-ascii-theme-font:minor-bidi;
-mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi '><a
-href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4267003">IEEE
-Systems Journal</a><o:p></o:p></span></span></p>
-
-<p class=MsoNormal><span style='font-family:"Arial",sans-serif;mso-ascii-theme-font:
-minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
-color:#222222 '><a
-href="https://ijai.iaescore.com/index.php/IJAI">Intelligence (IJ-AI)</a><span
-style='mso-spacerun:yes'>  </span></span><span class=MsoHyperlink><span
-style='font-family:"Arial",sans-serif;mso-ascii-theme-font:minor-bidi;
-mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi '><a
-href="https://www.techscience.com/journal/csse">CSSE-Computer Systems Science
-and Engineering</a></span></span><span style='font-family:"Arial",sans-serif;
-mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-minor-bidi;color:#222222 '><span style='mso-tab-count:1'>     </span></span><span
-class=MsoHyperlink><span style='font-family:"Arial",sans-serif;mso-ascii-theme-font:
-minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
-background:white'><o:p></o:p></span></span></p>
-
-<p class=MsoNormal><span style='font-family:"Arial",sans-serif;mso-ascii-theme-font:
-minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
-color:#222222 '><span style='mso-tab-count:1'>            </span></span><span
-lang=EN-AU style='font-family:"Arial",sans-serif;mso-ascii-theme-font:minor-bidi;
-mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;mso-ansi-language:
-EN-AU'><o:p></o:p></span></p>
-		
-        </ul>
-
-        <h4 id="member">Conference Reviewer</h4>
-<p class=MsoNormal><span lang=EN-AU style='font-family:"Arial",sans-serif;
-mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-minor-bidi;mso-ansi-language:EN-AU'><a href="https://fit.edu.pk/">FIT ’23</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://ictapp-23.aup.edu.pk/">ICTAPP-23</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://adma2024.github.io/">ADMA-24</a><span style='mso-tab-count:
-1'>     </span><span class=MsoHyperlink><a href="https://pstda2023.github.io/">DSAA<span
-lang=EN-US style='mso-ansi-language:EN-US'>-2023</span></a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<o:p></o:p></span></p>
-        
-        <hr>
-
+<!-- ===== RESEARCH INTERESTS ===== -->
+<div class="section" id="research">
+  <h3>Research Interests</h3>
+  <div class="card">
+    <div style="display:flex; flex-wrap:wrap; gap:10px;">
+      <span class="tags">Machine Learning</span>
+      <span class="tags">Privacy & Security</span>
+      <span class="tags">Data Science</span>
+      <span class="tags">Natural Language Processing</span>
+      <span class="tags">Sentiment Analysis</span>
+      <span class="tags">Networks</span>
+      <span class="tags">Internet of Things (IoT)</span>
     </div>
-        </div>
-    </div>
-  
-  <a href="#top">back to top</a>
+  </div>
+</div>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <p>Last Updated: 18 Aug 2023</p>
-      <ul class="social-icons">
-        <li><a href="#"><i class="fa fa-google"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-        <!-- Add more social icons as needed -->
-      </ul>
-    </div>
-  </footer>
+<!-- ===== EDUCATION ===== -->
+<div class="section" id="education">
+  <h3>Education</h3>
 
+  <div class="card timeline-item">
+    <b>Postdoctoral Fellowship (Machine Learning) — 2025</b><br>
+    Macquarie University, Sydney, Australia
+  </div>
+
+  <div class="card timeline-item">
+    <b>PhD in Computer Science (Data Mining & Privacy) — 2020</b><br>
+    Capital University of Science and Technology (CUST), Islamabad, Pakistan<br>
+    <b>Thesis:</b> 
+    <a href="https://cust.edu.pk/on-the-effectiveness-of-private-information-retrieval-protocols/" target="_blank">
+      On the Effectiveness of Private Information Retrieval Protocols
+    </a>
+  </div>
+
+  <div class="card timeline-item">
+    <b>MS Information Technology — 2010</b><br>
+    Institute of Management Sciences, Peshawar, Pakistan<br>
+    <b>Thesis:</b> Conceptual Framework of Multi-Bandwidth Link Aggregation
+  </div>
+
+  <div class="card timeline-item">
+    <b>BS (Hons) Computer Science — 2007</b><br>
+    Islamia College, University of Peshawar, Pakistan<br>
+    <b>Thesis:</b> Performance Evaluation of Peshawar University Computer Network and Suggestions for Optimization
+  </div>
+</div>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<div class="section" id="certifications">
+  <h3>Certifications</h3>
+
+  <div class="card">🎓 <b>Begin to Teach (BTT)</b><br>Macquarie University, Sydney — 2023</div>
+  <div class="card">📊 <b>Google Data Analytics</b><br>2023</div>
+  <div class="card">🌐 <b>CCNP Switching</b><br>Cisco — 2009</div>
+  <div class="card">🌐 <b>CCNP Routing</b><br>Cisco — 2008</div>
+  <div class="card">🌐 <b>CCNA</b><br>Cisco — 2007</div>
+</div>
+
+<!-- ===== EXPERIENCE ===== -->
+<div class="section" id="experience">
+  <h3>Professional Experience</h3>
+
+  <div class="card timeline-item">
+    <b>Lecturer & BS Program Coordinator</b><br>
+    University of Agriculture Peshawar, Pakistan (2011 – Present)
+  </div>
+
+  <div class="card timeline-item">
+    <b>Visiting Fellow & Casual Academic</b><br>
+    Macquarie University, Australia (2023 – 2025)
+  </div>
+
+  <div class="card timeline-item">
+    <b>Lecturer</b><br>
+    Preston University, Peshawar (2007 – 2008)
+  </div>
+</div>
+
+<!-- ===== SKILLS ===== -->
+<div class="section" id="skills">
+  <h3>Technical Skills</h3>
+  <div class="card">
+    <b>Programming Languages:</b> C, C++, Java, Python, SQL, LaTeX<br>
+    <b>Research Domains:</b> Machine Learning, Privacy, NLP, Cybersecurity, IoT<br>
+    <b>Tools & Platforms:</b> WEKA, MySQL, Linux, Windows, MS Office
+  </div>
+</div>
+
+<!-- ===== PROPOSED COURSES ===== -->
+<div class="section" id="courses">
+  <h3>Proposed Courses</h3>
+  <div class="card">
+    <ul>
+      <li><a href="Anonymity and Privacy.pdf" target="_blank">Anonymity and Privacy</a></li>
+      <li><a href="Text Mining and Analytics.pdf" target="_blank">Text Mining and Analytics</a></li>
+      <li><a href="Private Information Retrieval.pdf" target="_blank">Private Information Retrieval</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== SERVICES & MEMBERSHIPS (ELITE ACADEMIC STYLE) ===== -->
+<div class="section" id="services">
+  <h3>Services & Memberships</h3>
+
+  <!-- Academic & Professional Services -->
+  <div class="card">
+    <h4 style="color:#990000; margin-bottom:8px;">Academic & Professional Services</h4>
+    <p>
+      <b>Journal Reviewer:</b> Active reviewer for high-impact international journals in computer science, 
+      machine learning, cybersecurity, and data science.
+    </p>
+  </div>
+
+  <!-- Journal Reviewer -->
+  <div class="card">
+    <h4 style="color:#990000; margin-bottom:12px;">Journal Reviewer</h4>
+
+    <div style="display:flex; flex-wrap:wrap; gap:10px; font-size:14px;">
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">IEEE Access</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">Scientific Reports</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">Computer & Security</span>
+
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">Complexity</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">Scientific Programming</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">CMC – Computers, Materials & Continua</span>
+
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">IEEE Transactions on Smart Grid</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">ACM Transactions on the Web</span>
+
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">CCPE Journal</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">IJIST</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">IASC</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">IGI Global</span>
+
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">IAES International Journal of Artificial Intelligence</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">IEEE Systems Journal</span>
+
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">Intelligence (IJ-AI)</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">CSSE – Computer Systems Science and Engineering</span>
+    </div>
+  </div>
+
+  <!-- Conference Reviewer -->
+  <div class="card">
+    <h4 style="color:#990000; margin-bottom:12px;">Conference Reviewer</h4>
+
+    <div style="display:flex; flex-wrap:wrap; gap:10px; font-size:14px;">
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">FIT ’23</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">ICTAPP-23</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">ADMA-24</span>
+      <span style="background:#fff3e6; color:#990000; padding:6px 12px; border-radius:18px;">DSAA-2023</span>
+    </div>
+  </div>
+
+  <!-- Conference Organizing Committee -->
+  <div class="card">
+    <h4 style="color:#990000; margin-bottom:12px;">Conference Organizing Committee</h4>
+
+    <!-- ICTAPP 2023 -->
+    <div class="timeline-item" style="margin-bottom:14px;">
+      <span style="font-size:13px; color:#666;">2023</span><br>
+      <b>International Conference on Computing Technologies, Tools, and Applications (ICTAPP-23)</b><br>
+      
+      <span style="display:inline-block; background:#fff3e6; color:#990000; padding:3px 10px; border-radius:12px; font-size:12px; margin:4px 4px 0 0;">
+        Keynote Speaker
+      </span>
+      <span style="display:inline-block; background:#fff3e6; color:#990000; padding:3px 10px; border-radius:12px; font-size:12px; margin:4px 4px 0 0;">
+        Organizing Committee Member
+      </span>
+      <span style="display:inline-block; background:#fff3e6; color:#990000; padding:3px 10px; border-radius:12px; font-size:12px; margin:4px 4px 0 0;">
+        Reviewer
+      </span>
+
+      <p style="margin:6px 0 0 0; font-size:14px;">
+        <b>Institution:</b> The University of Agriculture Peshawar<br>
+        <b>Location:</b> Peshawar, Pakistan
+      </p>
+    </div>
+
+    <!-- ADMA 2024 -->
+    <div class="timeline-item">
+      <span style="font-size:13px; color:#666;">2024</span><br>
+      <b>The 20th International Conference on Advanced Data Mining and Applications (ADMA-2024)</b><br>
+
+      <span style="display:inline-block; background:#fff3e6; color:#990000; padding:3px 10px; border-radius:12px; font-size:12px; margin:4px 4px 0 0;">
+        Organizing Committee Member
+      </span>
+      <span style="display:inline-block; background:#fff3e6; color:#990000; padding:3px 10px; border-radius:12px; font-size:12px; margin:4px 4px 0 0;">
+        Reviewer
+      </span>
+
+      <p style="margin:6px 0 0 0; font-size:14px;">
+        <b>Institution:</b> Macquarie University<br>
+        <b>Location:</b> Sydney, Australia
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+<footer>
+© 2026 Dr. Rafiullah Khan | Modern Academic Portfolio Website
+</footer>
 
 </body>
-
 </html>

@@ -1,575 +1,232 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students | Dr. Rafiullah Khan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Helvetica;
-	panose-1:2 11 6 4 2 2 2 2 2 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:"Calibri Light";
-	panose-1:2 15 3 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-h3
-	{mso-style-link:"Heading 3 Char";
-	margin-top:2.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	line-height:105%;
-	page-break-after:avoid;
-	font-size:12.0pt;
-	font-family:"Calibri Light",sans-serif;
-	color:#1F4D78;
-	font-weight:normal;}
-h4
-	{mso-style-link:"Heading 4 Char";
-	margin-top:2.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	line-height:105%;
-	page-break-after:avoid;
-	font-size:11.0pt;
-	font-family:"Calibri Light",sans-serif;
-	color:#2E74B5;
-	font-weight:normal;
-	font-style:italic;}
-a:link, span.MsoHyperlink
-	{color:#0563C1;
-	text-decoration:underline;}
-a:visited, span.MsoHyperlinkFollowed
-	{color:#954F72;
-	text-decoration:underline;}
-span.Heading3Char
-	{mso-style-name:"Heading 3 Char";
-	mso-style-link:"Heading 3";
-	font-family:"Calibri Light",sans-serif;
-	color:#1F4D78;}
-span.Heading4Char
-	{mso-style-name:"Heading 4 Char";
-	mso-style-link:"Heading 4";
-	font-family:"Calibri Light",sans-serif;
-	color:#2E74B5;
-	font-style:italic;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
+:root {
+  --bg: #ffeecc;
+  --primary: #990000;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #666;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== HEADER ===== */
+header {
+  background: var(--primary);
+  color: white;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ===== PAGE TITLE ===== */
+.page-title {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+/* ===== SECTION ===== */
+.section {
+  margin-top: 35px;
+}
+
+.section h2 {
+  font-size: 22px;
+  color: var(--primary);
+  border-left: 6px solid var(--primary);
+  padding-left: 12px;
+  margin-bottom: 16px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  margin-bottom: 20px;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: #fff7ef;
+}
+
+tr:hover {
+  background: #ffe2cc;
+  transition: 0.2s;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  padding: 20px;
+  border-top: 2px solid var(--primary);
+}
 </style>
-
 </head>
+<body>
 
-<body lang=EN-US link="#0563C1" vlink="#954F72">
+<header>
+  <h1>Dr. Rafiullah Khan</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="students.htm">Students</a>
+    <a href="publications.html">Publications</a>
+    <a href="book.html">Books/Chapters</a>
+    <a href="courses.html">Courses</a>
+  </nav>
+</header>
 
-<div class=WordSection1>
+<div class="container">
 
-<h3 style='margin-top:15.0pt;margin-right:0in;margin-bottom:7.5pt;margin-left:
-0in;background:#E6E4DC'><strong><span style='font-size:14.0pt;line-height:105%;
-font-family:"Helvetica",sans-serif;color:#A6192E'><a href="index.html"><span
-style='color:#0563C1'>Home</span></a></span></strong><strong><span
-style='font-size:14.0pt;line-height:105%;font-family:"Helvetica",sans-serif;
-color:#CC0000'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><strong><span
-style='font-size:14.0pt;line-height:105%;font-family:"Helvetica",sans-serif;
-color:#A6192E'>Students</span></strong><strong><span style='font-size:14.0pt;
-line-height:105%;font-family:"Helvetica",sans-serif;color:#CC0000'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><strong><span
-style='font-size:14.0pt;line-height:105%;font-family:"Helvetica",sans-serif;
-color:#A6192E;font-weight:normal'><a href="pub.html"><b>Publications</b></a></span></strong><strong><span
-style='font-size:14.0pt;line-height:105%;font-family:"Helvetica",sans-serif;
-color:#CC0000'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><strong><span
-style='font-size:14.0pt;line-height:105%;font-family:"Helvetica",sans-serif;
-color:#A6192E'><a href="book.html"><span style='color:#0563C1'>Books/Chapters</span></a></span></strong><strong><span
-style='font-size:14.0pt;line-height:105%;font-family:"Helvetica",sans-serif;
-color:#CC0000'>&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></h3>
+<h1 class="page-title">Current and Previous Students</h1>
+<p class="page-subtitle">PhD and MS research supervision in Machine Learning, Privacy, Data Science, and Networks.</p>
 
-<p class=MsoNormal style='line-height:105%'><b><u><span style='font-size:1.0pt;
-line-height:105%'><span style='text-decoration:none'>&nbsp;</span></span></u></b></p>
+<!-- ===== PHD STUDENTS ===== -->
+<div class="section">
+  <h2>PhD Students</h2>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Thesis Title / Research Topic</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Misbah Daud</td>
+          <td>Federated Learning and Temporal Behavior and Interests of User</td>
+          <td>Enrolled</td>
+        </tr>
+        <tr>
+          <td>Said Ul Ibrar</td>
+          <td>Darknet Traffic Analysis for Curious Patterns</td>
+          <td>Enrolled</td>
+        </tr>
+        <tr>
+          <td>Asiya Jan</td>
+          <td>Machine Unlearning for Private Web Search</td>
+          <td>Enrolled</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-<p class=MsoNormal style='margin-top:15.0pt;margin-right:0in;margin-bottom:
-7.5pt;margin-left:0in;line-height:normal;background:#E6E4DC'><span
-style='font-size:22.5pt;font-family:"Helvetica",sans-serif;color:#A6192E'>Current
-and Previous Students</span></p>
+<!-- ===== MS STUDENTS ===== -->
+<div class="section">
+  <h2>MS Students</h2>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Thesis Title / Research Topic</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+<tbody>
+  <tr><td>Faiz ur Rahman</td><td>Evaluation Of Non-Fading Propagation Models Over A Reactive Based Routing Protocol In Ad Hoc Networks</td><td>2013</td></tr>
+  <tr><td>Misbah Daud</td><td>Roman Urdu Opinion Miner: An Opinion Based Customer Decision Support System</td><td>2014</td></tr>
+  <tr><td>Jamila Khan</td><td>Impact Of Node Density On The Performance Of DSR And FSR Using Random Way Point Mobility Model</td><td>2015</td></tr>
+  <tr><td>Fakhra Khan</td><td>Handling Agriculture Products Auction Activity Of Khyber Pakhtunkhwa Research Stations For Mobile Users</td><td>2015</td></tr>
+  <tr><td>Emran Thabet</td><td>Analyzing Political Situation From Social Network Reviews Of Yemeni People Using Data Mining Techniques</td><td>2018</td></tr>
+  <tr><td>Maria Noor</td><td>Performance Evaluation Of Mobility Models In DTN With Dense And Sparse Mode</td><td>2018</td></tr>
+  <tr><td>Shafiullah</td><td>Analysis Of Temporal Interest Of America Online (AOL) User Based On Web Search History</td><td>2019</td></tr>
+  <tr><td>Ibad Jan Babu</td><td>A Proposed Mechanism For Domain-Based Text Classification Using Terms Similarity Score</td><td>2019</td></tr>
+  <tr><td>Basheer Ahmad</td><td>Rainfall Prediction Using Chaotic Bat Back Propagation Algorithm</td><td>2019</td></tr>
+  <tr><td>Haidar Zaman</td><td>Feature-Based Sentiment Analysis Spam Detection Of Roman Urdu Reviews</td><td>2019</td></tr>
+  <tr><td>Maneela Shaheen</td><td>Automatic Classification Of Acute Myeloid Leukemia (AML) Using Convolution Neural Network</td><td>2021</td></tr>
+  <tr><td>Shabana Gul</td><td>A Novel Framework For Detection Of Scripted Urdu Sarcastic Opinions From Twitter</td><td>2022</td></tr>
+  <tr><td>Roman Aftab</td><td>TIP Rank: Twitter Influential Person Ranking</td><td>2022</td></tr>
+  <tr><td>Muhammad Kashif</td><td>Cluster Head Optimization Technique in Heterogeneous Wireless Sensor Network</td><td>2022</td></tr>
+  <tr><td>Sajjad Ullah Khan</td><td>Optimization technique for the scheduling of Home appliances considering demand side management</td><td>2022</td></tr>
+  <tr><td>Ijaz Ahmad</td><td>Covid-19 Infection Detection in Chest X-Ray Images Using Resnet50-Based Transfer Learning Approach</td><td>2022</td></tr>
+  <tr><td>Muhammad Irfan</td><td>Profile Based Sarcasm Detection In Twitter</td><td>2023</td></tr>
 
-<p class=MsoNormal><b><u><span style='font-size:1.0pt;line-height:107%'><span
- style='text-decoration:none'>&nbsp;</span></span></u></b></p>
+  <!-- ✅ Newly Added MS Students -->
+  <tr><td>Faisal Khan</td><td>Rust Detection in Plum Leaves</td><td>Enrolled</td></tr>
+  <tr><td>Syed Uzair Kakakhel</td><td>Improvement in DDoS and Spoofing Attack Detection in IoV</td><td>Enrolled</td></tr>
+</tbody>
 
-<h4 style='margin-top:7.5pt;margin-right:0in;margin-bottom:7.5pt;margin-left:
-0in;background:#E6E4DC'><b><span style='font-size:13.5pt;line-height:105%;
-font-family:"Helvetica",sans-serif;color:#333333;font-style:normal'>PhD</span></b></h4>
-
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=638
- style='width:478.35pt;border-collapse:collapse;border:none'>
- <tr style='height:17.5pt'>
-  <td width=104 style='width:78.2pt;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:17.5pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Student Name </b></p>
-  </td>
-  <td width=470 style='width:352.15pt;border:solid windowtext 1.0pt;border-left:
-  none;padding:0in 5.4pt 0in 5.4pt;height:17.5pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Thesis Title / Research Topic</b></p>
-  </td>
-  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-left:
-  none;padding:0in 5.4pt 0in 5.4pt;height:17.5pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Year </b></p>
-  </td>
- </tr>
- <tr style='height:13.35pt'>
-  <td width=104 style='width:78.2pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:13.35pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Misbah Daud </p>
-  </td>
-  <td width=470 style='width:352.15pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:13.35pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Federated Learning and Temporal Behavior and Interests of User</p>
-  </td>
-  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:13.35pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Enrolled</p>
-  </td>
- </tr>
- <tr style='height:12.65pt'>
-  <td width=104 valign=top style='width:78.2pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:12.65pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Said Ul Ibrar</p>
-  </td>
-  <td width=470 valign=top style='width:352.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:12.65pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Darknet Traffic Analysis for Curious Patterns</p>
-  </td>
-  <td width=64 valign=top style='width:48.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:12.65pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Enrolled</p>
-  </td>
- </tr>
-
-</tr>
- <tr style='height:12.65pt'>
-  <td width=104 valign=top style='width:78.2pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:12.65pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Asiya Jan</p>
-  </td>
-  <td width=470 valign=top style='width:352.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:12.65pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Machine Unlearning for Private Web Search</Search></p>
-  </td>
-  <td width=64 valign=top style='width:48.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:12.65pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Enrolled</p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<h4 style='margin-top:7.5pt;margin-right:0in;margin-bottom:7.5pt;margin-left:
-0in;background:#E6E4DC'><b><span style='font-size:13.5pt;line-height:105%;
-font-family:"Helvetica",sans-serif;color:#333333;font-style:normal'>MS</span></b></h4>
-
-<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=641
- style='width:480.85pt;border-collapse:collapse;border:none'>
- <tr style='height:15.25pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;padding:
-  0in 5.4pt 0in 5.4pt;height:15.25pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Student Name </b></p>
-  </td>
-  <td width=450 style='width:337.6pt;border:solid windowtext 1.0pt;border-left:
-  none;padding:0in 5.4pt 0in 5.4pt;height:15.25pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Thesis Title / Research Topic</b></p>
-  </td>
-  <td width=55 style='width:41.1pt;border:solid windowtext 1.0pt;border-left:
-  none;padding:0in 5.4pt 0in 5.4pt;height:15.25pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Year </b></p>
-  </td>
- </tr>
- <tr style='height:27.85pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:27.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Faiz ur Rahman </p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:27.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Evaluation Of Non-Fading Propagation Models Over A Reactive Based
-  Routing Protocol In Ad Hoc Networks</p>
-  </td>
-  <td width=55 style='width:41.1pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:27.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2013 </p>
-  </td>
- </tr>
- <tr style='height:24.4pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:24.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Misbah Daud </p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:24.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Roman Urdu Opinion Miner: An Opinion Based<br>
-  Customer Decision Support System</p>
-  </td>
-  <td width=55 style='width:41.1pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:24.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2014 </p>
-  </td>
- </tr>
- <tr style='height:23.85pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:23.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Jamila Khan </p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:23.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Impact Of Node Density On The Performance Of DSR And FSR Using Random
-  Way Point Mobility Model</p>
-  </td>
-  <td width=55 style='width:41.1pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:23.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2015 </p>
-  </td>
- </tr>
- <tr style='height:23.85pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:23.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Fakhra Khan </p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:23.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Handling Agriculture Products Auction Activity Of Khyber Pakhtunkhwa
-  Research Stations For Mobile Users</p>
-  </td>
-  <td width=55 style='width:41.1pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:23.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2015 </p>
-  </td>
- </tr>
- <tr style='height:23.85pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:23.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Emran Thabet</p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:23.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Analyzing Political Situation From Social Network Reviews Of Yemeni
-  People Using Data Mining Techniques</p>
-  </td>
-  <td width=55 style='width:41.1pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:23.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2018</p>
-  </td>
- </tr>
- <tr style='height:11.9pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Maria Noor</p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Performance Evaluation Of Mobility Models In DTN With Dense And
-  Sparse Mode </p>
-  </td>
-  <td width=55 style='width:41.1pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2018</p>
-  </td>
- </tr>
- <tr style='height:24.4pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:24.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Shafiullah</p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:24.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Analysis Of Temporal Interest Of America Online (AOL) User Based On
-  Web Search History</p>
-  </td>
-  <td width=55 style='width:41.1pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:24.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2019</p>
-  </td>
- </tr>
- <tr style='height:23.85pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:23.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Ibad Jan Babu</p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:23.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>A Proposed Mechanism For Domain-Based Text Classification Using Terms
-  Similarity Score</p>
-  </td>
-  <td width=55 style='width:41.1pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:23.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2019</p>
-  </td>
- </tr>
- <tr style='height:11.9pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Basheer Ahmad</p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Rainfall Prediction Using Chaotic Bat Back Propagation Algorithm</p>
-  </td>
-  <td width=55 style='width:41.1pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2019</p>
-  </td>
- </tr>
- <tr style='height:11.9pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Haidar Zaman</p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Feature-Based Sentiment Analysis Spam Detection Of Roman Urdu Reviews
-  </p>
-  </td>
-  <td width=55 style='width:41.1pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2019</p>
-  </td>
- </tr>
- <tr style='height:11.9pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Maneela Shaheen </p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Automatic Classification Of Acute Myeloid Leukemia (AML) Using
-  Convolution Neural Network</p>
-  </td>
-  <td width=55 style='width:41.1pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2021</p>
-  </td>
- </tr>
- <tr style='height:11.9pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Shabana Gul</p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>A Novel Framework For Detection Of Scripted Urdu Sarcastic Opinions
-  From The Twitter </p>
-  </td>
-  <td width=55 style='width:41.1pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2022</p>
-  </td>
- </tr>
- <tr style='height:11.9pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Roman Aftab</p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>TIP Rank: Twitter Influential Person Ranking </p>
-  </td>
-  <td width=55 valign=top style='width:41.1pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2022</p>
-  </td>
- </tr>
- <tr style='height:11.9pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Muhammad Kashif </p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Cluster Head Optimization Technique in Heterogeneous Wireless Sensor
-  Network </p>
-  </td>
-  <td width=55 valign=top style='width:41.1pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2022</p>
-  </td>
- </tr>
- <tr style='height:11.9pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Sajjad Ullah Khan</p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Optimization technique for the scheduling of Home appliances
-  considering demand side management </p>
-  </td>
-  <td width=55 valign=top style='width:41.1pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2022</p>
-  </td>
- </tr>
- <tr style='height:11.9pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Ijaz Ahmad</p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Covid-19 Infection Detection in Chest X-Ray Images Using
-  Resnet50-Based Transfer Learning Approach</p>
-  </td>
-  <td width=55 valign=top style='width:41.1pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2022</p>
-  </td>
- </tr>
-
- <tr style='height:11.9pt'>
-  <td width=136 style='width:102.15pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Muhammad Irfan</p>
-  </td>
-  <td width=450 style='width:337.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>Profile Based Sarcasm Detection In Twitter</p>
-  </td>
-  <td width=55 valign=top style='width:41.1pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:11.9pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>2023</p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal>&nbsp;</p>
 
 </div>
 
-</body>
+<footer>
+© 2026 Dr. Rafiullah Khan | Academic Supervision Portfolio
+</footer>
 
+</body>
 </html>
